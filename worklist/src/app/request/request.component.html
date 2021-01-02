@@ -1,22 +1,32 @@
-
-<fieldset>
-    <legend>My Work List</legend>
-    Please click on Request Id to see request details
-
-<div class="form-element-left">
-    <button type="button">Filter </button>
-</div>
-<div class="form-element-right">
-    <button type="button">Refresh </button>
-</div>
-</fieldset>
-<fieldset>
-    <table >
-        <tr>
-            <th *ngfor="let column of header">
-                {{column}}
-            </th>
-        </tr>
+<div class="headers m-5">
+  <h1>My Work List</h1>
+  <p>Click on Request ID to see request details</p>
+  <div class="buttons d-flex justify-content-between">
+    <div class="left-button">
+      <button type="submit" class="btn btn-secondary">Filter</button>
+    </div>
+    <div class="right-button">
+      <button class="btn btn-warning">Refresh</button>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table p-5 m-5">
+      <thead class="thead-light">
+        <td scope="col" *ngFor="let i of headers">{{i}}</td>
+      </thead>
+      <tbody>
+          <tr *ngFor="let i of results">
+            <td *ngFor="let j of i">{{j}}</td>
+          </tr>
+      </tbody>
     </table>
-</fieldset>
+  </div>
+</div>
 
+<div class="fluid text-center">
+    <button class="btn btn-primary">Back</button>
+</div>
+
+<footer class="text-center mt-5">
+    <p>Footer</p>
+  </footer>
