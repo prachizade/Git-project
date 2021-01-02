@@ -1,0 +1,22 @@
+
+<fieldset>
+    <legend>My Work List</legend>
+    Please click on Request Id to see request details
+
+<div class="form-element-left">
+    <button type="button">Filter </button>
+</div>
+<div class="form-element-right">
+    <button type="button">Refresh </button>
+</div>
+</fieldset>
+<fieldset>
+    <table >
+        <tr>
+            <th *ngfor="let column of header">
+                {{column}}
+            </th>
+        </tr>
+    </table>
+</fieldset>
+
